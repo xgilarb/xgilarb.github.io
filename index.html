@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Redirect</title>
+    <script>
+        // Function to redirect to a new URL
+        function redirect() {
+            window.location.href = "https://gillar.pages.dev";
+        }
+
+        // Call the redirect function after the page is loaded
+        window.onload = function () {
+
+            setTimeout(redirect, 300);
+
+            document.getElementById("manualRedirect").innerHTML = `
+                If you are not redirected automatically, <a href="https://gillar.pages.dev">click here</a>.
+            `;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting to another site...</p>
+    <p id="manualRedirect"></p>
+</body>
+
+</html>
